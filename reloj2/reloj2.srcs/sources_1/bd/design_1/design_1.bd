@@ -1,0 +1,119 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x7BB6CDA3E4DA4152",
+      "device": "xc7a35tcpg236-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3"
+    },
+    "design_tree": {
+      "clk_wiz_0_0": "",
+      "reloj_0": ""
+    },
+    "ports": {
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "a": {
+        "direction": "I"
+      },
+      "b": {
+        "direction": "I"
+      },
+      "led2": {
+        "direction": "O"
+      },
+      "led": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "clk_wiz_0_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0"
+      },
+      "reloj_0": {
+        "vlnv": "xilinx.com:module_ref:reloj:1.0",
+        "xci_name": "design_1_reloj_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "reloj",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "led2": {
+            "direction": "O"
+          },
+          "a": {
+            "direction": "I"
+          },
+          "b": {
+            "direction": "I"
+          },
+          "led": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0_0/clk_out1",
+          "reloj_0/clk"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "reset",
+          "clk_wiz_0_0/reset"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "clk",
+          "clk_wiz_0_0/clk_in1"
+        ]
+      },
+      "a_0_1": {
+        "ports": [
+          "a",
+          "reloj_0/a"
+        ]
+      },
+      "b_0_1": {
+        "ports": [
+          "b",
+          "reloj_0/b"
+        ]
+      },
+      "reloj_0_led2": {
+        "ports": [
+          "reloj_0/led2",
+          "led2"
+        ]
+      },
+      "reloj_0_led": {
+        "ports": [
+          "reloj_0/led",
+          "led"
+        ]
+      }
+    }
+  }
+}
